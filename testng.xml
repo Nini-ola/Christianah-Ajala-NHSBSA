@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Job Search Test Suite">
+    <test name="SearchTest">
+        <classes>
+            <class name="pages.TestRunner"/>
+        </classes>
+    </test>
+</suite>
