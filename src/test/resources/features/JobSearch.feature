@@ -63,3 +63,4 @@ Feature: Job Search Test Functionality
     When I search for a "faia322c" role
     And I click the search Button
     Then I should see a message that no jobs were found
+
