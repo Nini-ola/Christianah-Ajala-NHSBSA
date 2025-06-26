@@ -34,7 +34,7 @@ Acceptance Criteria & Covered Scenarios:
 - Jobs are posted on weekdays only.
 - If there are no jobs posted today, the most recent available job should appear first (even if posted days ago).
 - When only one job is returned, it is assumed to be the newest available, even if it wasn't posted today.
-- Search results may use singular or plural ("1 job found" vs "5 jobs found") — test regex accounts for this.
+- Search results may use singular or plural ("1 job found" vs "5 jobs found"). Test regex accounts for this.
 - The test expects at least one job to appear when valid role/location values are provided, unless deliberately testing for no matches.
 - “Newest first” means results are sorted by posting date in descending order.
 - Jobs have certain key words attached to them therefore search results for job types may not give job listings with the exact role requested
