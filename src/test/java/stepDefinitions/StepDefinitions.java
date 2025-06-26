@@ -50,4 +50,5 @@ public class StepDefinitions {
     public void iShouldSeeTheMostRecentDateFirst() {
         jobActions.verifyTheMostRecentDay();
     }
+
 }
