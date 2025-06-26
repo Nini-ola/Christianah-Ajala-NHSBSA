@@ -1,20 +1,17 @@
 package pages;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import utils.WebDriverConfig;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.SearchJobObject;
 
 import java.time.Duration;
 
 public class SearchJobActions {
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver = WebDriverConfig.getDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     SearchJobObject searchJob = new SearchJobObject(driver);
 
     public void setUp(){
-        WebDriverManager.chromedriver().setup();
         driver.get("https://www.jobs.nhs.uk/candidate/search");
         driver.manage().window().maximize();
     }
@@ -35,6 +32,10 @@ public class SearchJobActions {
         searchJob.verifyRoleResult(role);
     }
 
+    public void verifyJobMileSearchResult(String role, String city){
+        searchJob.verifyRoleDistanceResult(role, city);
+    }
+
     public void sortByNewestDate(){
         searchJob.filterByDate();
     }
@@ -45,6 +46,14 @@ public class SearchJobActions {
 
     public void submitSearchCriteria(){
         searchJob.searchForJob();
+    }
+
+    public void allJobSearch(){
+        searchJob.sendSearch();
+    }
+
+    public void noResults(){
+        searchJob.noResultsFound();
     }
 
 }
