@@ -54,7 +54,7 @@ Feature: Job Search Test Functionality
 
   Scenario: User Should see a message when no jobs match the search criteria
     Given I am on the NHS job search site
-    When I search for jobs using "Atlantis" as a preferred city
+    When I search for jobs using "Atlantisa" as a preferred city
     And I click the search Button
     Then I should see a message that no jobs were found
 
