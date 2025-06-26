@@ -32,6 +32,10 @@ public class SearchJobActions {
         searchJob.verifyRoleResult(role);
     }
 
+    public void verifyJobMileSearchResult(String role, String city){
+        searchJob.verifyRoleDistanceResult(role, city);
+    }
+
     public void sortByNewestDate(){
         searchJob.filterByDate();
     }
@@ -42,6 +46,14 @@ public class SearchJobActions {
 
     public void submitSearchCriteria(){
         searchJob.searchForJob();
+    }
+
+    public void allJobSearch(){
+        searchJob.sendSearch();
+    }
+
+    public void noResults(){
+        searchJob.noResultsFound();
     }
 
 }

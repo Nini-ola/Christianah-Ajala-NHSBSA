@@ -31,11 +31,6 @@ public class StepDefinitions {
         jobActions.specifyCity(city);
     }
 
-    @And("I sort by {string} to filter")
-    public void iSortByToFilter(String date) {
-        jobActions.specifyCity(date);
-    }
-
     @Then("I see jobs available for {string}")
     public void iSeeJobsAvailableFor(String role) {
         jobActions.verifyJobOnlySearchResult(role);
@@ -50,5 +45,4 @@ public class StepDefinitions {
     public void iShouldSeeTheMostRecentDateFirst() {
         jobActions.verifyTheMostRecentDay();
     }
-
 }
